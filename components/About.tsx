@@ -43,16 +43,16 @@ const About: React.FC = () => {
       :
         <Grid container spacing={4} maxWidth="lg" sx={{animation: '1s showAnim forwards'}}>
         {
-          sections.map(element => (
+          sections.map((element, index) => (
 
-        <Grid item xs={12} md={6}>
+        <Grid key={index} item xs={12} md={6}>
           <Typography variant="h4" gutterBottom>
             {element.title}
           </Typography>
           {
             element.textIntroParagraphs.map(element => (
 
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph key={index}>
             {element}
           </Typography>
             ))

@@ -1,4 +1,4 @@
-import { Box, Typography, Button, IconButton } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
 import Image from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import React, { ReactNode } from 'react';

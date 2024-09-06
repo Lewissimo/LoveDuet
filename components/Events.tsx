@@ -1,8 +1,7 @@
-import React, { ReactNode, useEffect, useState } from 'react'
-import { Box, Grid, List, ListItemButton, ListItemText, Typography, Icon } from '@mui/material';
+import React, {useEffect, useState } from 'react'
+import { Box, Grid, List, ListItemButton, ListItemText, Typography} from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { example } from './exEvents';
-import OfferDetails from './OfferDetails';
 interface EventItem {
    eventTitle: string;
     date: string;
@@ -12,14 +11,9 @@ interface EventItem {
   
 const Events = () => {
     const [events,setEvents] = useState<EventItem[]>([]);
-    const [details, setDetails] = useState<ReactNode | null>(null);
   useEffect(()=>{
     setEvents(example);
   }, [example])
-      
-  const handleItemClick = (item: ReactNode | null) => {
-    setDetails(item);
-  };
 
     
   return (
@@ -37,8 +31,8 @@ const Events = () => {
       backgroundColor: 'rgb(23, 19, 20)',
     }}
   >
-      {
-      details ? <span style={{animation: '1s showAnim forwards',width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor:'rgba(23, 19, 20, .7)'}}>{details}</span> :
+      
+       {/* <span style={{animation: '1s showAnim forwards',width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor:'rgba(23, 19, 20, .7)'}}>{details}</span> : */}
     <Grid height={'100vh'} container sx={{animation: '1s showAnim forwards'}}>
 
         <Grid xs={12} lg={6} item display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}> 
@@ -79,7 +73,7 @@ const Events = () => {
       </Grid>
       <Grid item xs={0} lg={6}/>
     </Grid>
-        }
+        
   </Box>
   )
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,7 +8,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Box, colors, useMediaQuery, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Link from 'next/link';
 
 const NavBar: React.FC = () => {
@@ -65,19 +64,19 @@ const NavBar: React.FC = () => {
       </Toolbar>
       <Drawer anchor="left" sx={{color:'white'}} open={drawerOpen} onClose={handleDrawerToggle}>
         <List>
-          <ListItem button onClick={handleDrawerToggle}>
+          <ListItem onClick={handleDrawerToggle}>
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button onClick={handleDrawerToggle}>
+          <ListItem onClick={handleDrawerToggle}>
             <ListItemText primary="O nas" />
           </ListItem>
-          <ListItem button onClick={handleDrawerToggle}>
+          <ListItem onClick={handleDrawerToggle}>
             <ListItemText primary="Oferta" />
           </ListItem>
-          <ListItem button onClick={handleDrawerToggle}>
+          <ListItem onClick={handleDrawerToggle}>
             <ListItemText primary="Galeria" />
           </ListItem>
-          <ListItem button onClick={handleDrawerToggle}>
+          <ListItem onClick={handleDrawerToggle}>
             <ListItemText primary="Kontakt" />
           </ListItem>
         </List>

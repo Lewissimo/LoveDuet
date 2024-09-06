@@ -30,8 +30,8 @@ const AboutDetails = ({
       </Box>
       <Typography variant='h2' sx={{ marginBottom: '12px' }}>{title}</Typography>
       {
-        text.map((element) => (
-          <Typography variant='body2' sx={{ color: '#666', lineHeight: '1.5', marginTop: '10px' }}>
+        text.map((element, index) => (
+          <Typography key={index} variant='body2' sx={{ color: '#666', lineHeight: '1.5', marginTop: '10px' }}>
             {element}
           </Typography>
         ))

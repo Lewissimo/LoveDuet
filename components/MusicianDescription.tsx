@@ -1,4 +1,4 @@
-import { Box, Typography, Avatar, Button, Modal } from '@mui/material'
+import { Box, Typography, Avatar, Modal } from '@mui/material'
 import React, { useState } from 'react'
 
 interface MusiacianDescriptionProps {
