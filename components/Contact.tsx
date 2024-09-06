@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
     <Box
       id="contact"
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -18,7 +18,6 @@ const Contact: React.FC = () => {
       }}
     >
       <Grid container spacing={4} maxWidth="lg">
-        {/* Contact 1 - Dorota Ritz */}
         <Grid item xs={12} md={6}>
           <Card
             sx={{

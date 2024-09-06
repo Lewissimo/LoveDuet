@@ -122,11 +122,11 @@ const Musicians = () => {
     <Box
       sx={{
           width: 'clamp(300px, 100%, 1200px)',
-          transition: '2s',
+          transition: '1.3s',
           height: showMusicians ? '800px' : '300px',
           maxHeight: '100vh',
           padding: '2rem',
-          overflowY: 'scroll',
+          overflowY: showMusicians ? 'auto' : 'hidden',
           color: 'black', borderRadius: '20px'
         }}
         >
